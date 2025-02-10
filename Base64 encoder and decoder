@@ -1,0 +1,84 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPd+tJjuJp0Bj8HwgonD7/q",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Fendaril/BootstrapAndPooper/blob/main/Base64%20encoder%20and%20decoder\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QmLaDMsZuAuC",
+        "outputId": "7b2fc607-da06-429b-c069-016a40eebcea"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['/usr/local/lib/python3.11/dist-packages/colab_kernel_launcher.py', '-f', '/root/.local/share/jupyter/runtime/kernel-905c1066-b067-41d5-85a0-5fceeaf4adc2.json']\n"
+          ]
+        }
+      ],
+      "source": [
+        "import sys\n",
+        "import argparse\n",
+        "import codecs\n",
+        "\n",
+        "def base64_encode(filename, outputfilename)\n",
+        "  try:\n",
+        "    with open(filename,'rb') as infile:\n",
+        "      data = infile.read()\n",
+        "      encoded_data=codecs.encode(data,'base64').decode('utf-8')\n",
+        "    with open(outputfilename,'w') as outfile:\n",
+        "      outfile.write(encoded_data)\n",
+        "    print(f\"file'{filename}' successfully base64 encoded to '{outputfilename}'\")\n",
+        "\n",
+        "  except FileNotFoundError:\n",
+        "    print(\"File not found\")\n",
+        "  except Exception as e:\n",
+        "    print(\"Exception '{e}' found\")\n",
+        "\n",
+        "def base64_decode(filename)\n",
+        "  try:\n",
+        "    with open(filename,'rb') as infile:\n",
+        "      data=infile.read()\n",
+        "      decoded_data= codecs.decode(filename,'utf-8')\n",
+        "    with open(outputfile,'w') as outputfile:\n",
+        "      outputfile.write(decoded_data)\n",
+        "  except FileNotFoundError:\n",
+        "    print(\"File not found\")\n",
+        "  except Exception as e:\n",
+        "    print(\"Exception '{e}' found\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "  parser= argparse.ArgumentParser(\"Base64 encode or decode a file\")"
+      ]
+    }
+  ]
+}
